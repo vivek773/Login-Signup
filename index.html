@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="css/app.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="user signinBx">
+          <div class="imgBx">
+            <img
+              src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="formBx">
+            <form action="" onsubmit="">
+              <h2>Sign In</h2>
+              <input type="email" id="uemail" name="uemail" placeholder="Enter Your Email" />
+              <input type="password" id="uPassword" name="uPassword" placeholder="Password" />
+              <input type="submit"  onsubmit="login();" name="SignIn" value="Login" />
+              <p class="signup">
+                Don't have an account ?
+                <a href="#" onclick="toggleForm();">Sign Up.</a>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="user signupBx">
+          <div class="formBx">
+            <form action="" onsubmit="Store();">
+              <h2>Create an account</h2>
+              <input
+                type="text"
+                id="uName"
+                name="Name"
+                placeholder="Enter Your Full Name"
+                required
+              />
+              <input
+                type="email"
+                id="uEmail"
+                name="Email"
+                placeholder=" Enter Your Email Address"
+                required
+                oninput="AlreadyExists(this)"
+              />
+              <input
+                type="password"
+                id="uCreatePassword"
+                name="CreatePassword"
+                placeholder="Create Password"
+                pattern=".{0}|.{6,}"
+                required
+              />
+              <input
+                type="password"
+                id="uConfirmPassword"
+                name="ConfirmPassword"
+                placeholder="Confirm Password"
+                oninput="verifyPassword(this)"
+                required
+              />
+              <input type="submit" onsubmit="Store();" name="SignUp" value="Sign Up" />
+              <p class="signup">
+                Already have an account ?
+                <a href="#" onclick="toggleForm();">Sign in.</a>
+              </p>
+            </form>
+          </div>
+          <div class="imgBx">
+            <img
+              src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img2.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
